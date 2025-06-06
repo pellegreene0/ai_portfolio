@@ -4,7 +4,7 @@ This project is an end-to-end real-time object detection and tracking system, de
 with continuous learning capabilities.
 
 ## Tech Stack
-**Model**: Yolov8  
+**Model**: Yolov8 (Object Detection) and Deepsort (Object Tracking)  
 **Edge**: TBD  
 **Cloud**: AWS SageMaker (Model Training)  
 **Streaming**: Kafka and Redis (Real-Time Data Processing)  
