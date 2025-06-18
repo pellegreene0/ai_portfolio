@@ -1,0 +1,244 @@
+/* Writing Assistant Extension Styles */
+
+#writing-assistant-box {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-size: 14px !important;
+  line-height: 1.4 !important;
+  color: #333 !important;
+  background: #ffffff !important;
+  border: 1px solid #e1e5e9 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  position: fixed !important;
+  top: 20px !important;
+  right: 20px !important;
+  width: 320px !important;
+  max-width: 90vw !important;
+  z-index: 2147483647 !important; /* Maximum z-index value */
+  display: none !important;
+  box-sizing: border-box !important;
+}
+
+#writing-assistant-box * {
+  box-sizing: border-box !important;
+  font-family: inherit !important;
+}
+
+#writing-assistant-box .wa-header {
+  background: #f8f9fa !important;
+  border-bottom: 1px solid #e1e5e9 !important;
+  padding: 12px 16px !important;
+  border-radius: 8px 8px 0 0 !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  margin: 0 !important;
+}
+
+#writing-assistant-box .wa-header strong {
+  font-weight: 600 !important;
+  color: #1a1a1a !important;
+  font-size: 14px !important;
+  margin: 0 !important;
+}
+
+#writing-assistant-box .wa-close {
+  background: none !important;
+  border: none !important;
+  font-size: 18px !important;
+  cursor: pointer !important;
+  color: #6c757d !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 24px !important;
+  height: 24px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 4px !important;
+  transition: background-color 0.2s ease !important;
+}
+
+#writing-assistant-box .wa-close:hover {
+  background: #e9ecef !important;
+  color: #495057 !important;
+}
+
+#writing-assistant-box .wa-content {
+  padding: 16px !important;
+  margin: 0 !important;
+}
+
+#writing-assistant-box .wa-button {
+  width: 100% !important;
+  padding: 10px 12px !important;
+  margin: 8px 0 !important;
+  border: 1px solid #007cba !important;
+  background: #007cba !important;
+  color: white !important;
+  border-radius: 6px !important;
+  cursor: pointer !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  transition: all 0.2s ease !important;
+  display: block !important;
+  text-align: center !important;
+  text-decoration: none !important;
+}
+
+#writing-assistant-box .wa-button:hover {
+  background: #0056b3 !important;
+  border-color: #0056b3 !important;
+  transform: translateY(-1px) !important;
+}
+
+#writing-assistant-box .wa-button:active {
+  transform: translateY(0) !important;
+}
+
+#writing-assistant-box .wa-button.secondary {
+  background: #6c757d !important;
+  border-color: #6c757d !important;
+}
+
+#writing-assistant-box .wa-button.secondary:hover {
+  background: #545b62 !important;
+  border-color: #545b62 !important;
+}
+
+#writing-assistant-box .wa-button.success {
+  background: #28a745 !important;
+  border-color: #28a745 !important;
+}
+
+#writing-assistant-box .wa-button.success:hover {
+  background: #218838 !important;
+  border-color: #218838 !important;
+}
+
+#writing-assistant-box .wa-suggestion {
+  background: #f8f9fa !important;
+  border: 1px solid #e9ecef !important;
+  border-left: 4px solid #007cba !important;
+  border-radius: 0 6px 6px 0 !important;
+  padding: 12px !important;
+  margin: 12px 0 !important;
+  font-size: 13px !important;
+  line-height: 1.5 !important;
+  color: #495057 !important;
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+}
+
+#writing-assistant-box .wa-button-group {
+  display: flex !important;
+  gap: 8px !important;
+  margin: 12px 0 8px 0 !important;
+}
+
+#writing-assistant-box .wa-button-group .wa-button {
+  flex: 1 !important;
+  margin: 0 !important;
+}
+
+#writing-assistant-box .wa-loading {
+  text-align: center !important;
+  padding: 24px 16px !important;
+  color: #6c757d !important;
+  font-size: 13px !important;
+}
+
+#writing-assistant-box .wa-loading::after {
+  content: '' !important;
+  display: inline-block !important;
+  width: 16px !important;
+  height: 16px !important;
+  margin-left: 8px !important;
+  border: 2px solid #e9ecef !important;
+  border-top: 2px solid #007cba !important;
+  border-radius: 50% !important;
+  animation: wa-spin 1s linear infinite !important;
+}
+
+@keyframes wa-spin {
+  0% { transform: rotate(0deg) !important; }
+  100% { transform: rotate(360deg) !important; }
+}
+
+#writing-assistant-box .wa-error {
+  background: #f8d7da !important;
+  border: 1px solid #f5c6cb !important;
+  border-left: 4px solid #dc3545 !important;
+  color: #721c24 !important;
+  padding: 12px !important;
+  margin: 12px 0 !important;
+  border-radius: 0 6px 6px 0 !important;
+  font-size: 13px !important;
+}
+
+#writing-assistant-box .wa-success {
+  background: #d4edda !important;
+  border: 1px solid #c3e6cb !important;
+  border-left: 4px solid #28a745 !important;
+  color: #155724 !important;
+  padding: 12px !important;
+  margin: 12px 0 !important;
+  border-radius: 0 6px 6px 0 !important;
+  font-size: 13px !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  #writing-assistant-box {
+    width: calc(100vw - 40px) !important;
+    left: 20px !important;
+    right: 20px !important;
+    top: 10px !important;
+  }
+}
+
+/* Ensure the box doesn't interfere with page content */
+#writing-assistant-box {
+  pointer-events: auto !important;
+}
+
+/* Hide on print */
+@media print {
+  #writing-assistant-box {
+    display: none !important;
+  }
+}
+
+/* Animation for showing/hiding */
+#writing-assistant-box.wa-show {
+  display: block !important;
+  animation: wa-fadeIn 0.3s ease-out !important;
+}
+
+#writing-assistant-box.wa-hide {
+  animation: wa-fadeOut 0.3s ease-out !important;
+}
+
+@keyframes wa-fadeIn {
+  from {
+    opacity: 0 !important;
+    transform: translateY(-10px) !important;
+  }
+  to {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+}
+
+@keyframes wa-fadeOut {
+  from {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+  to {
+    opacity: 0 !important;
+    transform: translateY(-10px) !important;
+  }
+}
